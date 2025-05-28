@@ -1,14 +1,16 @@
 const express = require('express');
-const app = express();
 const cors = require('cors')
+const app = express();
 
 // middlewares
+app.use(cors()) // ⚠️ Esto debe ir primero (antes que las rutas)
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
-app.use(cors())
 
 // routes
 app.use(require('./routes/index'));
 
-app.listen(5401);
-console.log('Server on port 5401');
+// Escuchar puerto
+app.listen(5401, () => {
+    console.log('Server on port 5401');
+});

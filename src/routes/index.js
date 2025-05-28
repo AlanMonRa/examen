@@ -8,7 +8,7 @@ const { getCliente,
         getFacturaById,
         createFactura,
         deleteFactura,
-        updateFactura, 
+        updateFactura,
         deleteCliente,
         updateCliente} = require('../controllers/index.controller')
 

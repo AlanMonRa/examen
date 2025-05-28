@@ -1,14 +1,14 @@
 const { Pool } = require('pg');
 
 const pool = new Pool({
-    host: 'ep-damp-sky-10507305.us-east-2.aws.neon.tech',
+    host: 'localhost',
     user: 'fl0user',
     password: 'sb0Q2niyzxVk',
     database: 'Restaurant',
     port: '5432',
-    ssl: {
+/*     ssl: {
         require: true,
-    },
+    }, */
 });
 
 
